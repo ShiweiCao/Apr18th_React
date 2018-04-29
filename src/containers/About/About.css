@@ -2,3 +2,8 @@ div.aboutcard{
     width: 800px;
     margin: auto;
 }
+
+div.avatars {
+    width: 200px;
+    margin: auto;
+}
