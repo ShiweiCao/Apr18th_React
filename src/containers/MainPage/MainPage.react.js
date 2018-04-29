@@ -6,9 +6,9 @@ class MainPage extends Component {
 
     render() {
       return (
-        <div>
+        <div className="Maintext">
           <h1>Welcome to CRAZY APRIL</h1>
-          <p>this page is out main page</p>
+          <p className="sub">this page is out main page</p>
         </div>
       );
 

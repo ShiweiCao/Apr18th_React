@@ -35,15 +35,14 @@ export default class Signup extends Component {
         return (
             <div className="signupmain">
             <MuiThemeProvider>
-            <h1>CRAZY APRIL</h1>
-            <h3>Sign up</h3>
+            <h1>Sign up</h1>
             <TextField name="fname" value={this.state.fname} onChange={this.onChange} hintText="First Name" floatingLabelText="First Name"/><br/> 
             <TextField name="lname" value={this.state.lname} onChange={this.onChange} hintText="Last Name" floatingLabelText="Last Name"/><br/> 
             <TextField name="web" value={this.state.web} onChange={this.onChange} hintText="Website Address" floatingLabelText="Website Address"/><br/>
             <TextField name="email" value={this.state.email} onChange={this.onChange} hintText="Email Address" floatingLabelText="Email Address"/><br/>                  
             <TextField name="pass" value={this.state.pass} onChange={this.onChange} hintText="Password" floatingLabelText="Password" type="password"/><br/>
-            <FlatButton onClick={this.onClick} primary="true" label="Sign up" fullWidth="true"/>
-            <p> Already have a account? <a href="/signin">sign in</a>here. </p>
+            <FlatButton onClick={this.onClick} primary={true} label="Sign up" fullWidth={true}/>
+            <p> Already have a account? <a href="/signin">sign in</a> here. </p>
             </MuiThemeProvider>
             </div>
         )
