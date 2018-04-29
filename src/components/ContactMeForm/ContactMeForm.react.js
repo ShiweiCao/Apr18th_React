@@ -27,6 +27,7 @@ export default class ContactMeForm extends Component {
             name : "",
             email : "",
             comments: "",
+            emailerror: "",
         };
     }
     
@@ -36,7 +37,13 @@ export default class ContactMeForm extends Component {
                 this.setState({name : event.target.value});break;
             }
             case "email":{
-                this.setState({email : event.target.value});break;
+                let regex = /^[a-z_0-9.-]{1,64}@([a-z0-9-]{1,200}.){1,5}[a-z]{1,6}$/;
+                if(regex.test(event.target.value)){
+                    this.setState({email : event.target.value, emailerror: ""});break;
+                } else {
+                    this.setState({email : event.target.value, emailerror : "Invalid Email Address!"})
+                }
+                break;
             }
             case "comments":{
                 this.setState({comments : event.target.value});break;
@@ -57,7 +64,7 @@ export default class ContactMeForm extends Component {
                             <TextField name="name" onChange={this.onChange} value={this.state.name} floatingLabelText="Your Name" floatingLabelStyle={styles.floatingLabelStyle} floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
                         </ul>
                         <ul>
-                            <TextField name="email" onChange={this.onChange} value={this.state.email} floatingLabelText="Your email" floatingLabelStyle={styles.floatingLabelStyle} floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
+                            <TextField name="email" onChange={this.onChange} value={this.state.email} errorText={this.state.emailerror} floatingLabelText="Your email" floatingLabelStyle={styles.floatingLabelStyle} floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
                         </ul>
                         <ul>
                             <TextField name="comments" onChange={this.onChange} value={this.state.comments} floatingLabelText="Question, comments etc. " multiLine="true" floatingLabelStyle={styles.floatingLabelStyle} floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
