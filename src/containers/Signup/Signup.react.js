@@ -33,7 +33,7 @@ export default class Signup extends Component {
 
     render(){
         return (
-            <div class="signupmain">
+            <div className="signupmain">
             <MuiThemeProvider>
             <h1>CRAZY APRIL</h1>
             <h3>Sign up</h3>

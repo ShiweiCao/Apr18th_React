@@ -3,7 +3,7 @@ import TextField from 'material-ui/TextField';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {orange500, blue500, red500, grey400, blue200, blue100} from 'material-ui/styles/colors';
 import FlatButton from 'material-ui/FlatButton';
-import "./ContactMeForm.css"
+
 
 const styles = {
     errorStyle: {
@@ -51,10 +51,8 @@ export default class ContactMeForm extends Component {
     render() {
         return(
             <MuiThemeProvider>
-                <div className="container">
-                    <ul>We are not avalible right now,but please leave us a message</ul>
+                        <ul>We are not avalible right now,but please leave us a message</ul>
 
-                    <form>
                         <ul>
                             <TextField name="name" onChange={this.onChange} value={this.state.name} floatingLabelText="Your Name" floatingLabelStyle={styles.floatingLabelStyle} floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
                         </ul>
@@ -64,9 +62,7 @@ export default class ContactMeForm extends Component {
                         <ul>
                             <TextField name="comments" onChange={this.onChange} value={this.state.comments} floatingLabelText="Question, comments etc. " multiLine="true" floatingLabelStyle={styles.floatingLabelStyle} floatingLabelFocusStyle={styles.floatingLabelFocusStyle}/>
                         </ul>
-                        <FlatButton onClick={this.onClick} primary="true" label="Send" fullWidth="true"/>
-                    </form>
-                </div>
+                        <FlatButton onClick={this.onClick} primary={true} label="Send" fullWidth={true}/>
             </MuiThemeProvider >
         );
     }
