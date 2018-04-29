@@ -9,11 +9,16 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import contactusReducer from './reducers/contactusReducer';
+import authReducer from './reducers/authReducer';
+import machinesReducer from './reducers/machinesReducer';
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
 
 const rootReducer = combineReducers({
-
+  contactus: contactusReducer,
+  auth: authReducer,
+  machineStatus: machinesReducer,
 });
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
