@@ -18,10 +18,7 @@ export default class ContactCard extends Component{
                     showExpandableButton={true}
                     />                    
                     <CardText expandable={true}>
-                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                        
-                        <div class="form">
                             <ContactMeForm/>
-                        </div>
                     </CardText>
                 </Card>
                 </MuiThemeProvider>
