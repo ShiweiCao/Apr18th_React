@@ -21,9 +21,9 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/" exact component={MainPage} />
           <Route path="/signin" component={SignIn} />
-          <Route path="/Signup" component={Signup} />
-          <Route path="/ServerInfo" component={ServerInfoTable} />  
-          <Route path="/AdminView" component={AdminView} />        
+          <Route path="/signup" component={Signup} />
+          <Route path="/machines" component={ServerInfoTable} />
+          <Route path="/messages" component={AdminView} />
           <Redirect to="/" />
 
         </Switch>
